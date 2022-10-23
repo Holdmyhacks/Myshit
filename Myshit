@@ -1,0 +1,53 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("HoldMyhack's Cheats", "Ocean")
+
+-- Player's Settings
+local Player = Window:NewTab("Player")
+local PlayerSection = Player:NewSection("Players Settings")
+
+PlayerSection:NewSlider("WalkSpeed", "Set Players WalkSpeed", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+PlayerSection:NewSlider("JumpPower", "Set Players JumpPower", 500, 0, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+PlayerSection:NewButton("Reset WalkSpeed & JumpPower", "Resets WalkSpeed & JumpPower At The Same Time", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+
+PlayerSection:NewButton("SuperHero", "Gives SuperPowers", function()
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200
+end)
+
+-- Tycoon Script
+local Tycoon = Window:NewTab("Tycoon")
+local TycoonSection = Tycoon:NewSection("Tycoon Script")
+
+TycoonSection:NewButton("Rat Washing Script", "Rat Washing Auto Farm", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Pikaruru/Scripts/main/loadstringloaderyes.lua"))()
+end)
+
+-- Command Scripts
+local Command = Window:NewTab("Command")
+local CommandSection = Command:NewSection("Command Scripts")
+
+CommandSection:NewButton("Infinite Yield", "Infinite Yield Command Script", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+CommandSection:NewButton("CMD-X", "CMD-X Command Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
+end)
+
+local CommandSection = Command:NewSection("The Best Admin Commands!")
+CommandSection:NewButton("ShatterVast Admin", "ShatterVast Admin Command Script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Holdmyhacks/Script/main/Script",true))();
+end)
+
+CommandSection:NewButton("Fates Admin", "Fates Admin Command Script", function ()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+end)
